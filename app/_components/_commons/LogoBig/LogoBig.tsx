@@ -7,10 +7,10 @@ export default function LogoBig() {
     <div className={styles.box}>
       <Image
         className={styles.img}
-        src="/LogoBigBL.png"
+        src="/logoBigBL.png"
         width={500}
         height={500}
-        alt="Picture of the author"
+        alt="logo"
       />
     </div>
   );
