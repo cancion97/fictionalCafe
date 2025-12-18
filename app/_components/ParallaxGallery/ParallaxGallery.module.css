@@ -19,6 +19,10 @@
   position: absolute;
   will-change: transform;
   width: 50%;
+
+  @media (max-width: 800px) {
+    width: 65%;
+  }
 }
 
 .image {
@@ -36,14 +40,59 @@
 .img2 {
   top: 250px;
   left: 0;
+  @media (max-width: 800px) {
+    top: 280px;
+  }
 }
 
 .img3 {
-  top: 1100px;
+  top: 900px;
   right: 100px;
+  @media (max-width: 800px) {
+    top: 900px;
+    right: 60px;
+  }
 }
 
 .img4 {
-  top: 1400px;
+  top: 1200px;
   left: 80px;
+  @media (max-width: 800px) {
+    top: 1100px;
+    left: 0px;
+  }
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    height: auto;
+    padding-inline: 1.25rem;
+  }
+
+  .inner {
+    height: auto;
+    padding-inline: 0;
+  }
+
+  .item {
+    position: relative; /* absolute を解除 */
+    width: 100%;
+    margin-bottom: 2rem;
+    transform: none !important; /* パララックス暴走防止 */
+  }
+
+  .image {
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  /* 位置指定を無効化 */
+  .img1,
+  .img2,
+  .img3,
+  .img4 {
+    top: auto;
+    left: auto;
+    right: auto;
+  }
 }
