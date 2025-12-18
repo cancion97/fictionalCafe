@@ -1,24 +1,45 @@
-.box {
+/* 角丸担当（Parallaxには触らない） */
+.radiusWrap {
+  width: 95vw;
+  height: 100vh;
+
+  overflow: hidden; /* ← 必須 */
+  border-radius: 0 0 200px 0; /* ← ここだけ */
+
   position: relative;
-  z-index: -5;
-  margin-block-start: 2rem;
 }
 
-.img {
-  width: 95vw;
-  margin-inline: auto;
-  border-radius: 0 0 200 0;
-  min-height: 500px;
-  object-fit: cover;
+/* Parallaxを親いっぱいに */
+.radiusWrap :global(.react-parallax) {
+  height: 100%;
+}
+
+/* 背景を必ずはみ出させる */
+.radiusWrap :global(.react-parallax-bgimage) {
+  min-height: 130%;
+}
+
+/* 前景 */
+.box {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
-  width: 350px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-  @media (width<750px) {
+  width: 450px;
+  z-index: 2;
+}
+
+@media (width < 750px) {
+  .radiusWrap {
+    height: 80vh;
+    border-radius: 0 0 120px 0;
+  }
+
+  .logo {
     width: 250px;
+    margin-block-start: -90px;
   }
 }

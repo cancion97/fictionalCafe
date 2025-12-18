@@ -1,0 +1,59 @@
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 1800px; /* ← 重なり分の高さを確保 */
+  position: relative;
+}
+
+/* 共通 */
+.item {
+  position: absolute;
+  will-change: transform;
+}
+
+.image {
+  width: 45%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* 👇 位置を個別指定（ここが肝） */
+.img1 {
+  top: 0;
+  left: 0;
+}
+
+.img2 {
+  top: 260px;
+  right: 0;
+}
+
+.img3 {
+  top: 620px;
+  left: 120px;
+}
+
+.img4 {
+  top: 980px;
+  right: 100px;
+}
+
+/* SP */
+@media (max-width: 768px) {
+  .wrapper {
+    height: 1200px;
+  }
+
+  .image {
+    width: 80%;
+  }
+
+  .img1,
+  .img2,
+  .img3,
+  .img4 {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,32 @@
+.container {
+  padding-block: 5rem;
+}
+
+.text {
+  text-align: center;
+  color: white;
+  font-family: var(--font-jp);
+  font-weight: normal;
+  letter-spacing: 5;
+  font-size: 20px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 400px;
+  z-index: 2;
+  @media (width<750px) {
+    width: 250px;
+  }
+}
+
+.box2 {
+  width: 115px;
+  margin-inline: auto;
+  margin-block-start: 2rem;
+}

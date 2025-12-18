@@ -1,0 +1,33 @@
+import Image from "next/image";
+import React from "react";
+import styles from "./Description.module.css";
+
+export default function Description() {
+  return (
+    <div className={styles.container}>
+      <h2 className={styles.text}>
+        スペシャリティコーヒー　×　ビンテージショップ
+      </h2>
+      <div className={styles.box}>
+        <Image
+          src="/logoBigWH.png"
+          alt="ロゴ"
+          width={600}
+          height={100}
+          className={styles.logo}
+          priority
+        />
+      </div>
+      <div className={styles.box2}>
+        <Image
+          src="/scrolldown.png"
+          alt="スクロールダウン"
+          width={600}
+          height={100}
+          className={styles.scroll}
+          priority
+        />
+      </div>
+    </div>
+  );
+}
