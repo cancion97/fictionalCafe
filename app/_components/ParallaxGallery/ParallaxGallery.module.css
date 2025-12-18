@@ -1,59 +1,49 @@
 .wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  height: 1800px; /* ← 重なり分の高さを確保 */
+  width: 100%;
+  margin-inline: auto;
+  height: 300vh;
   position: relative;
+  overflow: hidden; /* ← これ重要 */
+  padding-inline: 3rem;
 }
 
-/* 共通 */
+.inner {
+  max-width: 1200px;
+  margin-inline: auto;
+  position: relative;
+  height: 200vh;
+  padding-inline: 3rem;
+}
+
 .item {
   position: absolute;
   will-change: transform;
+  width: 50%;
 }
 
 .image {
-  width: 45%;
+  width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
-/* 👇 位置を個別指定（ここが肝） */
+/* 初期位置（ここで重なりを作る） */
 .img1 {
   top: 0;
-  left: 0;
-}
-
-.img2 {
-  top: 260px;
   right: 0;
 }
 
-.img3 {
-  top: 620px;
-  left: 120px;
+.img2 {
+  top: 250px;
+  left: 0;
 }
 
-.img4 {
-  top: 980px;
+.img3 {
+  top: 1100px;
   right: 100px;
 }
 
-/* SP */
-@media (max-width: 768px) {
-  .wrapper {
-    height: 1200px;
-  }
-
-  .image {
-    width: 80%;
-  }
-
-  .img1,
-  .img2,
-  .img3,
-  .img4 {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-  }
+.img4 {
+  top: 1400px;
+  left: 80px;
 }
