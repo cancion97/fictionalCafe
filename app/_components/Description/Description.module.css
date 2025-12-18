@@ -2,13 +2,27 @@
   padding-block: 5rem;
 }
 
+.textbox {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  @media (width<750px) {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-block-end: 1rem;
+  }
+}
+
 .text {
-  text-align: center;
   color: white;
   font-family: var(--font-jp);
   font-weight: normal;
   letter-spacing: 5;
   font-size: 20px;
+  @media (width<750px) {
+    font-size: 1rem;
+  }
 }
 
 .box {

@@ -5,9 +5,12 @@ import styles from "./Description.module.css";
 export default function Description() {
   return (
     <div className={styles.container}>
-      <h2 className={styles.text}>
-        スペシャリティコーヒー　×　ビンテージショップ
-      </h2>
+      <div className={styles.textbox}>
+        <h2 className={styles.text}>スペシャリティコーヒー </h2>
+        <h2 className={styles.text}>×</h2>
+        <h2 className={styles.text}>ビンテージショップ</h2>
+      </div>
+
       <div className={styles.box}>
         <Image
           src="/logoBigWH.png"

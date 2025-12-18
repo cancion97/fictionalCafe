@@ -6,9 +6,9 @@ import styles from "./ParallaxGallery.module.css";
 
 const images = [
   { src: "/para1.webp", speed: 0.1, className: "img1" },
-  { src: "/para2.webp", speed: 0.15, className: "img2" },
+  { src: "/para2.webp", speed: 0.2, className: "img2" },
   { src: "/para3.webp", speed: 0.12, className: "img3" },
-  { src: "/para4.webp", speed: 0.18, className: "img4" },
+  { src: "/para4.webp", speed: 0.2, className: "img4" },
 ];
 
 export default function ParallaxGallery() {
