@@ -1,0 +1,7 @@
+.text {
+  font-family: var(--font-en);
+}
+
+.title {
+  border-bottom: 1px black solid;
+}

@@ -1,0 +1,6 @@
+.img {
+  width: 400px;
+  @media (width< 900px) {
+    width: 300px;
+  }
+}
